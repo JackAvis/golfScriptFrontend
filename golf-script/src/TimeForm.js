@@ -4,10 +4,6 @@ import { useState } from "react";
 
 export default function TimeForm() {
     const handleSubmit = async (event) => {  
-      console.log(time1);
-      console.log(time2);
-      console.log(time3);
-      console.log(time4);
       event.preventDefault();
       let body = {
         "time1": time1,
