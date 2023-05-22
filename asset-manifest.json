@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/golfScriptFrontend/static/css/main.d9ac59b6.css",
-    "main.js": "/golfScriptFrontend/static/js/main.89e20700.js",
+    "main.js": "/golfScriptFrontend/static/js/main.f47eb183.js",
     "static/js/787.a2ce9741.chunk.js": "/golfScriptFrontend/static/js/787.a2ce9741.chunk.js",
     "static/media/logo.svg": "/golfScriptFrontend/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/golfScriptFrontend/index.html",
     "main.d9ac59b6.css.map": "/golfScriptFrontend/static/css/main.d9ac59b6.css.map",
-    "main.89e20700.js.map": "/golfScriptFrontend/static/js/main.89e20700.js.map",
+    "main.f47eb183.js.map": "/golfScriptFrontend/static/js/main.f47eb183.js.map",
     "787.a2ce9741.chunk.js.map": "/golfScriptFrontend/static/js/787.a2ce9741.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d9ac59b6.css",
-    "static/js/main.89e20700.js"
+    "static/js/main.f47eb183.js"
   ]
 }
