@@ -29,19 +29,19 @@ export default function TimeForm() {
   const [time4, setTime4] = useState('');
   const [submitMessage, setSubmitMessage] = useState('')
   return (
-    <div>
+    <div className="container">
       <Flex width="full" align="center" justifyContent="center">
         <Box p={2}>
           <Box textAlign="center">
-            <Heading>Governor's Club Registration Script</Heading>
+            <Heading>Governor's Club Tee Time Registration Script</Heading>
           </Box>
-          <Box class='b' my={4} textAlign="center">
+          <Box class='b' my={1} textAlign="center">
               <div className='t'>Enter up to 4 desired times (<b>earliest will be chosen first</b>) in this format: "hh:mm AM/PM" e.g. ("8:00 AM")</div>
           </Box>
-          <Center>(Hitting the button multiple times restarts the script with new times)</Center>
+          <Center class='t'>(Hitting the button multiple times restarts the script with new times)</Center>
           <Box my={4} textAlign="left">
             <form onSubmit={handleSubmit}>
-              <FormControl>
+              <FormControl mt={6}>
                 <FormLabel>Time 1</FormLabel>
                 <Input type="time1" placeholder="" onChange={event => setTime1(event.currentTarget.value)} />
               </FormControl>
@@ -49,11 +49,11 @@ export default function TimeForm() {
                 <FormLabel>Time 2</FormLabel>
                 <Input type="time2" placeholder="" onChange={event => setTime2(event.currentTarget.value)} />
               </FormControl>
-              <FormControl>
+              <FormControl mt={6}>
                 <FormLabel>Time 3</FormLabel>
                 <Input type="time3" placeholder="" onChange={event => setTime3(event.currentTarget.value)} />
               </FormControl>
-              <FormControl>
+              <FormControl mt={6}>
                 <FormLabel>Time 4</FormLabel>
                 <Input type="time4" placeholder="" onChange={event => setTime4(event.currentTarget.value)} />
               </FormControl>
