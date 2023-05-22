@@ -21,7 +21,7 @@ export default function TimeForm() {
       else{
         targetDate.setDate(targetDate.getDate() + 7)
       }
-      setSubmitMessage(`The earliest desired time out of your times chosen (${time1 == '' ? '' : time1 + ','} ${time2 == '' ? '' : time2 + ','} ${time4 == '' ? '' : time4 + ''}) will be registered @ 7:00 AM on \n ${targetDate.toDateString()}`)
+      setSubmitMessage(`The earliest desired time out of your times chosen (${time1 == '' ? '' : time1 + ','} ${time2 == '' ? '' : time2 + ','} ${time4 == '' ? '' : time4 + ''}) will be registered @ 7:00 AM for \n ${targetDate.toDateString()}`)
     }
     const [time1, setTime1] = useState('');
     const [time2, setTime2] = useState('');
