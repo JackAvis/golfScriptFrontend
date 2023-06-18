@@ -1,4 +1,4 @@
-import { Flex, Box, Heading, FormControl, Input, Button, FormLabel, Center } from "@chakra-ui/react";
+import { Flex, Box, Heading, FormControl, Input, Button, FormLabel, Center, Text } from "@chakra-ui/react";
 import axios from 'axios';
 import { useState } from "react";
 
@@ -21,7 +21,12 @@ export default function TimeForm() {
     else {
       targetDate.setDate(targetDate.getDate() + 7)
     }
-    setSubmitMessage(`The earliest desired time out of your times chosen (${time1 == '' ? '' : time1 + ','} ${time2 == '' ? '' : time2 + ','} ${time4 == '' ? '' : time4 + ''}) will be registered @ 7:00 AM for \n ${targetDate.toDateString()}`)
+    if (time1 === '' && time2 === '' && time3 === '' && time4 === ''){
+      setSubmitMessage(`No times selected: Any previously submitted registration times have been canceled.`)
+    }
+    else{
+      setSubmitMessage(`The earliest desired time out of your times chosen (${time1 === '' ? '' : time1 + ','} ${time2 === '' ? '' : time2 + ','} ${time4 === '' ? '' : time4 + ''}) will be registered @ 7:00 AM for \n ${targetDate.toDateString()}`)
+    }
   }
   const [time1, setTime1] = useState('');
   const [time2, setTime2] = useState('');
@@ -36,9 +41,14 @@ export default function TimeForm() {
             <Heading>Governor's Club Tee Time Registration Script</Heading>
           </Box>
           <Box class='b' my={1} textAlign="center">
-              <div className='t'>Enter up to 4 desired times (<b>earliest will be chosen first</b>) in this format: "hh:mm AM/PM" e.g. ("8:00 AM")</div>
+              <div className='t'>Enter up to 4 desired times (<b>earliest will be chosen first</b>) in the exact format as they show on the site: e.g. ("8:00 AM", "12:24 PM")</div>
           </Box>
-          <Center class='t'>(Hitting the button multiple times restarts the script with new times)</Center>
+          <Box class='b' my={1} textAlign="center">
+              <div className='t'>(Hitting the button multiple times <b>restarts</b> the script with new times)</div>
+          </Box>
+          <Box class='b' my={1} textAlign="center">
+              <div className='t'>(Hitting the button with no times will <b>cancel</b> any previously submitted registration requests)</div>
+          </Box>
           <Box my={4} textAlign="left">
             <form onSubmit={handleSubmit}>
               <FormControl mt={6}>
